@@ -1,0 +1,2 @@
+# LinuxFromScratch
+とりあえずリポジトリだけ作成
