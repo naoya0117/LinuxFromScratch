@@ -1,0 +1,25 @@
+bash, version 5.2.37(1)-release
+/bin/sh -> /usr/bin/bash
+Binutils: version 2.44-3.fc42
+bison (GNU Bison) 3.8.2
+yacc not found
+Coreutils:  9.6
+diff (GNU diffutils) 3.12
+find (GNU findutils) 4.10.0
+GNU Awk 5.3.1, API 4.0, PMA Avon 8-g1, (GNU MPFR 4.2.2, GNU MP 6.3.0)
+/usr/bin/awk -> /usr/bin/gawk
+gcc (GCC) 15.1.1 20250521 (Red Hat 15.1.1-2)
+g++ (GCC) 15.1.1 20250521 (Red Hat 15.1.1-2)
+grep (GNU grep) 3.11
+gzip 1.13
+Linux version 6.10.14-linuxkit (root@buildkitsandbox) (gcc (Alpine 13.2.1_git20240309) 13.2.1 20240309, GNU ld (GNU Binutils) 2.42) #1 SMP Thu Mar 20 16:32:56 UTC 2025
+m4 (GNU M4) 1.4.19
+GNU Make 4.4.1
+GNU patch 2.8
+Perl version='5.40.2';
+Python 3.13.3
+sed (GNU sed) 4.9
+tar (GNU tar) 1.35
+texi2any (GNU texinfo) 7.2
+xz (XZ Utils) 5.8.1
+g++ compilation OK

@@ -10,12 +10,19 @@ LABEL org.opencontainers.image.licenses=MIT
 ARG UID=1000
 ARG GID=1000
 
+ARG USERNAME=nonroot
+
 # 非特権ユーザとグループの作成
-RUN getent group ${GID} || groupadd -g ${GID} nonroot && \
-  getent passwd ${UID} || useradd -u ${UID} -g ${GID} -m -s /bin/bash nonroot
+RUN getent group ${GID} || groupadd -g ${GID} ${USERNAME} && \
+  getent passwd ${UID} || useradd -u ${UID} -g ${GID} -m -s /bin/bash ${USERNAME} && \
+  # sudoを無認証で利用できるようにする
+  echo "${USERNAME} ALL=(ALL) NOPASSWD: ALL" > /etc/sudoers.d/99-nopassword-${USERNAME} && \
+  chmod 0440 /etc/sudoers.d/99-nopassword-${USERNAME}
+
 
 # インストールするNode.jsのバージョン
 ENV NODE_VERSION=22
+ENV LFS=/mnt/lfs
 
 RUN dnf install -y \
   # 環境構築に必要なパッケージ
@@ -29,6 +36,8 @@ RUN dnf install -y \
   gawk texinfo \
   # version_check.shによって不足を検出したパッケージ
   binutils bison gcc gcc-c++ m4 make patch perl texinfo-tex \
+  # chapterで新たに必要になったパッケージ
+  iputils wget python3-devel \
   # 任意ツール(node)
   nodejs && \
   ln -sfn /usr/bin/bison /usr/bin/yacc && \
@@ -37,7 +46,7 @@ RUN dnf install -y \
   rm -rf /var/cache/dnf
 
 # 非特権ユーザを作成
-USER nonroot
+USER $USERNAME
 
 # 作業ディレクトリ
-WORKDIR /workdir
+WORKDIR $LFS

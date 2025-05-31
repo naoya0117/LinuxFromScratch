@@ -1,0 +1,5 @@
+LFS Build Started: Sat May 31 22:32:08 UTC 2025
+Host Distribution: PRETTY_NAME="Fedora Linux 42 (Container Image Prerelease)"
+Kernel Version: 6.10.14-linuxkit
+Architecture: aarch64
+LFS Directory: /mnt/lfs
