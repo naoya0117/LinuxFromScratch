@@ -27,8 +27,11 @@ RUN dnf install -y \
   dnf install -y \
   # lfsの開発に必要なパッケージ(ドキュメント記載)
   gawk texinfo \
+  # version_check.shによって不足を検出したパッケージ
+  binutils bison gcc gcc-c++ m4 make patch perl texinfo-tex \
   # 任意ツール(node)
   nodejs && \
+  ln -sfn /usr/bin/bison /usr/bin/yacc && \
   # キャッシュの削除
   dnf clean all && \
   rm -rf /var/cache/dnf
