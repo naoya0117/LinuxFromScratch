@@ -1,0 +1,15 @@
+# vim: set filetype=yaml.docker-compose :
+services:
+  lfs:
+    image: 'ghcr.io/naoya0117/linux-from-scratch:${ENV-dev}-${ARCH-x86_64}'
+    build:
+      context: './docker-dev/lfs/'
+      dockerfile: 'fedora.Dockerfile'
+      args:
+        - UID=${UID-1000}
+        - GID=${GID-1000}
+    volumes:
+      - './src/:/workdir/src'
+      - './docs/:/workdir/docs'
+    tty: true
+    stdin_open: true
