@@ -1,6 +1,5 @@
 # vim: set filetype=gitignore :
 .env
 
-*.tar.xz
-*.tar.gz
-*.tgz
+*.tar.*
+*.tgz*
