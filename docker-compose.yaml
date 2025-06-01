@@ -9,10 +9,9 @@ services:
         - UID=${UID-1000}
         - GID=${GID-1000}
     volumes:
-      - './bin/:/mnt/lfs/bin/'
-      - './documents/:/mnt/lfs/documents/'
-      - './sources/:/mnt/lfs/sources/'
-      - './tools/:/mnt/lfs/tools/'
+      - './lfs-root/:/mnt/lfs'
       - './logs:/home/nonroot/lfs-logs/'
+      - './bin/:/home/nonroot/bin/'
+      - './docs/:/home/nonroot/docs/'
     tty: true
     stdin_open: true

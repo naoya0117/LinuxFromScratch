@@ -1,0 +1,6 @@
+Chapter 2 完了記録:
+完了日時: Sun Jun  1 00:00:00 UTC 2025
+LFS パーティション: /run/host_mark/Users on /mnt/lfs type fakeowner (rw,nosuid,nodev,relatime,fakeowner)
+LFS ディレクトリ: /mnt/lfs
+ファイルシステム: 
+利用可能容量: /run/host_mark/Users  927G  156G  772G  17% /mnt/lfs
