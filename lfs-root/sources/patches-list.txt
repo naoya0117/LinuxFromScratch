@@ -1,6 +1,0 @@
-# LFS 12.3 required patches
-
-bash-5.3-rc1-cross_compile_fix-1.patch
-coreutils-9.7-upstream_fix-1.patch
-perl-5.40.2-upstream_fix-1.patch
-python-3.13.3-security_fixes-1.patch
