@@ -10,7 +10,7 @@ LABEL org.opencontainers.image.licenses=MIT
 ARG UID=1000
 ARG GID=1000
 
-ARG USERNAME=nonroot
+ARG USERNAME=lfs
 
 # 非特権ユーザとグループの作成
 RUN getent group ${GID} || groupadd -g ${GID} ${USERNAME} && \
